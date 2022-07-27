@@ -11,21 +11,37 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    fileprivate var imageURL: URL?
+    fileprivate var image: UIImage?{
+        get {
+            return imageView.image
+        }
+        set {
+            activityIndicator.startAnimating()
+            activityIndicator.isHidden = true
+            imageView.image = newValue
+            imageView.sizeToFit()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        fetchImage()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    fileprivate func fetchImage() {
+        imageURL = URL(string: "https://www.19fortyfive.com/wp-content/uploads/2022/01/AK-47-1.jpg")
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
+        let queue = DispatchQueue.global(qos: .utility)
+        queue.async {
+            guard let url = self.imageURL, let dataImage = try? Data(contentsOf: url) else { return }
+            DispatchQueue.main.async {
+                self.image = UIImage(data: dataImage)
+            }
+        }
     }
-    */
-
 }

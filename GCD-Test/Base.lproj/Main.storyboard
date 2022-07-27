@@ -57,14 +57,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ndh-EL-ZEy">
-                                <rect key="frame" x="0.0" y="88" width="414" height="270"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="AbH-6r-W0C"/>
-                                    <constraint firstAttribute="height" constant="270" id="jlr-FI-Aut"/>
+                                    <constraint firstAttribute="height" constant="210" id="jlr-FI-Aut"/>
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="xJb-qk-3w7">
-                                <rect key="frame" x="197" y="213" width="20" height="20"/>
+                                <rect key="frame" x="197" y="183" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="svi-D7-mGi"/>
