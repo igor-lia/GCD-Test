@@ -8,7 +8,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -27,11 +27,11 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         fetchImage()
     }
     
-    fileprivate func fetchImage() {
+   fileprivate func fetchImage() {
         imageURL = URL(string: "https://www.19fortyfive.com/wp-content/uploads/2022/01/AK-47-1.jpg")
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()

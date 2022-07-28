@@ -9,10 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var buttonLabel: UIButton!
+    @IBOutlet weak var buttonVC2: UIButton!
+    @IBOutlet weak var buttonVC3: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonLabel.layer.cornerRadius = 15
+        
+        buttonVC2.layer.cornerRadius = 15
+        buttonVC3.layer.cornerRadius = 15
+        
     }
 }
 
